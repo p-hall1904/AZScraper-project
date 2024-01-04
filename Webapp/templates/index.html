@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Product Scraper</title>
+</head>
+<body>
+    <h1>Amazon Product Scraper</h1>
+
+    <form action="/" method="post">  
+        <label for="user_search">What item would you like to scrape:</label>
+        <input type="text" id="user_search" name="user_search" value="{{ user_searchs}}"><br><br>
+        <input type="submit" value="Scrape"> 
+    </form>
+
+    <ul>
+        {% for product in products %}
+            <li>
+                <strong>{{ product.Name }}</strong> - <a href="{{ product.Link }}" target="_blank">View Product</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

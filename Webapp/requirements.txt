@@ -1,0 +1,6 @@
+Flask==2.0.1
+Werkzeug==2.2.2
+gunicorn==21.2.0
+selenium==4.16.0
+amazoncaptcha==0.5.11
+webdriver_manager==4.0.1
